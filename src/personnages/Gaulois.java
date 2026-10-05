@@ -26,6 +26,13 @@ public class Gaulois {
 		return "Gaulois [nom=" + nom + ", force=" + force + "]";
 	}
 	
+	public void frapper(Romain romain) {
+		String nomRomain = romain.getNom();
+		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + nomRomain);
+		int forceCoup = force / 3;
+		romain.recevoirCoup(forceCoup);
+		}
+	
 	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois("asterix", 8);
 		System.out.println(asterix);
