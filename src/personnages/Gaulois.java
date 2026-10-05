@@ -5,7 +5,6 @@ public class Gaulois {
 	private int force;
 	
 	public Gaulois(String nom, int force) {
-		super();
 		this.nom = nom;
 		this.force = force;
 	}
@@ -21,6 +20,17 @@ public class Gaulois {
 	private String prendreParole() {
 		return "Le gaulois " + nom + " : ";
 	}
+
+	@Override
+	public String toString() {
+		return "Gaulois [nom=" + nom + ", force=" + force + "]";
+	}
 	
+	public static void main(String[] args) {
+		Gaulois asterix = new Gaulois("asterix", 8);
+		System.out.println(asterix);
+		System.out.println(asterix.getNom());
+	}
+
 	
 }
