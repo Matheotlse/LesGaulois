@@ -1,14 +1,15 @@
 package test_fonctionne;
 
+import personnages.Druide;
 import personnages.Gaulois;
 import personnages.Romain;
 
 public class TestGaulois {
 	public static void main(String[] args) {
-		Gaulois asterix = new Gaulois("Asterix", 8);
-		Gaulois obelix = new Gaulois("Obelix", 16);
-		asterix.parler("Bonjour" + obelix.getNom());
-		obelix.parler("Bonjour" + asterix.getNom() + "Ca te dirais d'aller chasser des sangliers ?");
+		Gaulois asterix = new Gaulois("Asterix", 8, 1);
+		Gaulois obelix = new Gaulois("Obelix", 16, 1);
+		asterix.parler("Bonjour " + obelix.getNom());
+		obelix.parler("Bonjour " + asterix.getNom() + " Ca te dirais d'aller chasser des sangliers ?");
 		asterix.parler("Oui très bonne idée");
 		
 		Romain minus = new Romain("Minus", 6);
@@ -16,5 +17,16 @@ public class TestGaulois {
 		for (int i = 0; i <3; i++) {
 			asterix.frapper(minus);
 		}
+		Romain brutus = new Romain("Brutus", 14);
+		Druide panoramix = new Druide("Panoramix", 2);
+		panoramix.fabriquerPotion(4, 3);
+		panoramix.booster(obelix);
+		panoramix.booster(asterix);
+		for (int i = 0; i <3; i++) {
+			asterix.frapper(brutus);
+		}
+		
+		
+		
 	}
 }
